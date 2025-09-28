@@ -1,12 +1,12 @@
 import {Link, useNavigate, useParams} from "react-router";
 import {useEffect, useState} from "react";
+import {usePuterStore} from "~/lib/puter";
 import Summary from "~/components/Summary";
 import ATS from "~/components/ATS";
 import Details from "~/components/Details";
-import {usePuterStore} from "~/liib/puter";
 
 export const meta = () => ([
-    { title: 'Resume | Review ' },
+    { title: 'Resumind | Review ' },
     { name: 'description', content: 'Detailed overview of your resume' },
 ])
 
@@ -66,7 +66,6 @@ const Resume = () => {
                                     src={imageUrl}
                                     className="w-full h-full object-contain rounded-2xl"
                                     title="resume"
-                                    alt="resume"
                                 />
                             </a>
                         </div>
@@ -81,7 +80,7 @@ const Resume = () => {
                             <Details feedback={feedback} />
                         </div>
                     ) : (
-                        <img src="/images/resume-scan-2.gif" alt="resume-scan" className="w-full" />
+                        <img src="/images/resume-scan-2.gif" className="w-full" />
                     )}
                 </section>
             </div>
